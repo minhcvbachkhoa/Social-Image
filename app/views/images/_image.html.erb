@@ -10,9 +10,14 @@
 
       <div class="images-header-info">
         <h6><%= link_to image.user.name, image.user %>
-          <span class="image-post-title">
-            <%= t "images.uploaded-a-image" %>
-          </span>
+          <% if image.object == image.user %>
+            <span class="image-post-title">
+              <%= t "images.uploaded-a-image" %>
+            </span>
+          <% else %>
+            <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+            <span><%= link_to image.object.name, image.object %></span>
+          <% end %>
         </h6>
         <small><%= time_ago_in_words image.created_at %></small>
         <% if user_signed_in? %>
@@ -42,7 +47,7 @@
                 <% end %>
               <% end %>
               <% unless image.user.current_user? current_user %>
-                <span id="image-bookmark-<%= image.id %>">
+                <span class= "bookmark" id="image-bookmark-<%= image.id %>">
                   <%= render "bookmarks/bookmark_form", image: image %>
                 </span>
               <% end %>
@@ -83,7 +88,7 @@
     </span>
     <span class="images-comments">
       <%= image_tag "comment.png", class: "images-comment-icon" %>
-      <span id="comment-size-<%= image.id %>">
+      <span class="comment" id="comment-size-<%= image.id %>">
         <%= image.comments.hash_tree(limit_depth: Settings.limit_depth).size %>
       </span>
       <%= t "comments.comment" %>
@@ -115,7 +120,7 @@
       <% offset = comment.id %>
     <% end %>
   </div>
-  <div id="load-more-image-comments-<%= image.id %>">
+  <div class="more-comment" id="load-more-image-comments-<%= image.id %>">
     <% if image.comments.hash_tree(limit_depth: Settings.limit_depth).size >
       image_comments.size %>
       <%= link_to t("view-more"), image_comments_path(image, offset: offset),
