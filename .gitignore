@@ -23,6 +23,8 @@
 /config/database.yml
 /config/secrets.yml
 /public/uploads/**
+app/assets/javascripts/i18n/*
+public/javascripts/*
 /.framgia-ci-reports/**
 .framgia-ci-result.temp.yml
 

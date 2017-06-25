@@ -1,0 +1,122 @@
+$white: #fff;
+$black3: rgba(0, 0, 0, .16);
+$color1: #e9ebee;
+
+.searches {
+  h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    padding-top: 5px;
+    text-align: center;
+  }
+
+  hr {
+    margin: 0 !important;
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
+  }
+
+  .search-image {
+    .col-md-4 {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+  .show-image-search {
+    .images-show {
+      height: 300px;
+    }
+  }
+
+  .search-user {
+    padding: 20px;
+    padding-bottom: 0;
+    padding-top: 0;
+    width: 100%;
+
+    .col-md-4 {
+      padding: 10px;
+    }
+
+    .follow-users {
+      background-color: $white;
+      height: 75px;
+      padding: 10px;
+    }
+  }
+
+  .search-category {
+    .search-category-str {
+      height: 50px;
+      text-align: center;
+    }
+  }
+}
+
+.search-results {
+  left: 0;
+  padding: 7px;
+  position: absolute;
+  top: 33px;
+  width: 500px;
+}
+
+.results {
+  background-color: $white;
+  box-shadow: 1px 2px 4px 1px $black3 !important;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-left: 0;
+
+  p {
+    background-color: $color1;
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 0 !important;
+
+    b {
+      display: inline-block;
+      padding-left: 10px;
+      padding-right: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  li {
+    cursor: pointer;
+    height: 45px;
+    line-height: 45px;
+
+    p {
+      background-color: $white;
+      padding-left: 10px;
+      padding-right: 10px;
+      vertical-align: middle;
+    }
+  }
+
+  hr {
+    margin: 0 !important;
+  }
+}
+
+
+.images-search-img,
+.users-search-img {
+  padding-left: 10px;
+
+  img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.images-search-str,
+.users-search-str {
+  background-color: $white;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}

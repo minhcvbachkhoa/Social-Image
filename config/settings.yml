@@ -2,6 +2,7 @@ objs: ["user", "group"]
 attrs: ["avatar", "cover"]
 classes: ["User", "GroupUser", "Album"]
 metas: ["User", "Image"]
+search_objects: ["Image", "User", "Group"]
 load_more_user_size: 4
 load_more_image_size: 4
 load_more_comment_size: 3

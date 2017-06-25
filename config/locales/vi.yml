@@ -135,6 +135,7 @@ vi:
             name:
               blank: "Tên không thể để trống"
   list-users: "Danh sách người dùng"
+  list-groups: "Danh sách nhóm"
   view-more: "Xem thêm"
   view-less: "Ẩn"
   category: "Thể loại"

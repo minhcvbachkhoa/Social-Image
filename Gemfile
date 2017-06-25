@@ -24,6 +24,8 @@ gem "faker", "1.7.3"
 gem "carrierwave"
 gem "mini_magick", "3.8.0"
 gem "closure_tree"
+gem "ransack"
+gem "i18n-js"
 
 group :development, :test do
   gem "byebug", platform: :mri

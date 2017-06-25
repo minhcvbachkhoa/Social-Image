@@ -15,4 +15,11 @@ class Group < ApplicationRecord
   def have_member? user
     users.include? user
   end
+
+  class << self
+    def search data
+      data = data.downcase
+      Group.is_public.where "lower(name) LIKE ?", "%#{data}%"
+    end
+  end
 end

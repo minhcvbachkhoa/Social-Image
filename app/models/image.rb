@@ -37,6 +37,11 @@ class Image < ApplicationRecord
     def bookmarked_images user
       Image.where(id: user.bookmarks.pluck(:likeable_id)).order id: :desc
     end
+
+    def search data
+      data = data.downcase
+      Image.where "lower(description) LIKE ?", "%#{data}%"
+    end
   end
 
   private

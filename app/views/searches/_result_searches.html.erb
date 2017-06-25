@@ -1,0 +1,38 @@
+<div class="news-feed-middle">
+  <div class="news-feed-middle-content with-padding searches">
+    <div class="search-image">
+      <h2><%= t "images.images" %></h2>
+      <% results["images"].each do |image| %>
+        <div class="show-album">
+          <div class="col-md-4 show-image-album">
+            <%= render "albums/image", image: image %>
+          </div>
+        </div>
+      <% end %>
+      <div class="clearfix"></div>
+      <hr>
+    </div>
+
+    <div class="search-user">
+      <h2><%= t "list-users" %></h2>
+      <% results["users"].each do |user| %>
+        <div class="col-md-4">
+          <%= render "users/user", user: user %>
+        </div>
+      <% end %>
+      <div class="clearfix"></div>
+      <hr>
+    </div>
+
+    <div class="search-groups">
+      <h2><%= t "list-groups" %></h2>
+      <% results["groups"].each do |group| %>
+        <div class="col-md-4">
+          <%= render "groups/group", group: group %>
+        </div>
+      <% end %>
+      <div class="clearfix"></div>
+      <hr>
+    </div>
+  </div>
+</div>

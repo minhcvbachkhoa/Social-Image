@@ -62,4 +62,12 @@ class User < ApplicationRecord
   def liked likeable
     likes.find_by likeable: likeable
   end
+
+  class << self
+    def search data
+      data = data.downcase
+      User.not_admin.where "lower(name) LIKE ? or lower(email) LIKE ?",
+        "%#{data}%", "%#{data}"
+    end
+  end
 end
