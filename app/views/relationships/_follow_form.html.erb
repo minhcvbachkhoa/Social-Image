@@ -1,4 +1,4 @@
-<div id="follow-form-<%= user.id %>">
+<div class="follow" id="follow-form-<%= user.id %>">
   <% if user_signed_in? && current_user.followed?(user) %>
     <%= render "relationships/unfollow", relationship: current_user
       .user_relationship(user) %>
